@@ -1,0 +1,20 @@
+{
+  "name": "broccoli-wrap",
+  "description": "Wrap filter for Broccoli",
+  "version": "0.0.1",
+  "author": "Artem Sushchev <Suschev.Artem@gmail.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/H1D/broccoli-wrap"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "javascript",
+    "wrap"
+  ],
+  "dependencies": {
+    "broccoli-filter": "^0.1.6"
+  }
+}
