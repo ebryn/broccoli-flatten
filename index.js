@@ -7,6 +7,8 @@ function WrapFilter (inputTree, options) {
   if (!(this instanceof WrapFilter)) return new WrapFilter(inputTree, options)
   Filter.call(this, inputTree, options)
   this.options = options || {};
+  this.options.extensions = this.options.extensions || ['js'];
+  this.extensions = this.options.extensions;
 }
 
 WrapFilter.prototype.processString = function (string) {
@@ -17,5 +19,5 @@ WrapFilter.prototype.processString = function (string) {
   var startWith = wrapper[0] || '';
   var endWith = wrapper[1] || '';
   
-  return [startWith, string, endWith].join()
+  return [startWith, string, endWith].join('')
 }

@@ -19,6 +19,8 @@ The following options are supported:
 
 * `wrapper` array of two strings to be placed as start and the end of stream (file)
 
+* `extensions` array of file extensions to process; default: `['js']`
+
 ###Example
 ```js
 var wrapFiles = require('broccoli-wrap');
