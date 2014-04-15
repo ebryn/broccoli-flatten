@@ -1,20 +1,23 @@
 {
-  "name": "broccoli-wrap",
-  "description": "Wrap filter for Broccoli",
+  "name": "broccoli-flatten",
+  "description": "Flatten file tree for Broccoli",
   "version": "0.0.1",
   "author": "Artem Sushchev <Suschev.Artem@gmail.com>",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/H1D/broccoli-wrap"
+    "url": "https://github.com/H1D/broccoli-flatten"
   },
   "keywords": [
     "broccoli-plugin",
     "javascript",
-    "wrap"
+    "flatten"
   ],
   "dependencies": {
-    "broccoli-filter": "^0.1.6"
+    "broccoli-kitchen-sink-helpers": "^0.2.0",
+    "broccoli-writer": "^0.1.1",
+    "path": "^0.4.9"
   }
 }
