@@ -1,4 +1,4 @@
-# broccoli-uglify-js
+# broccoli-wrap
 
 ## Installation
 
