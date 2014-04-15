@@ -3,7 +3,6 @@
   "description": "Flatten file tree for Broccoli",
   "version": "0.0.1",
   "author": "Artem Sushchev <Suschev.Artem@gmail.com>",
-  "private": true,
   "main": "index.js",
   "license": "MIT",
   "repository": {
