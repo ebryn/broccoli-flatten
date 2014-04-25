@@ -50,7 +50,7 @@ var files =  pickFiles('js', {
         files: ['*/*.js'],
         destDir: '/dist'
       })
-var files_flat = flatten('files', { destDir: 'dist' });
+var files_flat = flatten(files, { destDir: 'dist' });
 
 module.exports = files_flat;
 ```
