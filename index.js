@@ -7,8 +7,17 @@ Flatten.prototype = Object.create(Writer.prototype);
 Flatten.prototype.constructor = Flatten;
 function Flatten (inputTree, options) {
   if (!(this instanceof Flatten)) return new Flatten(inputTree, options);
+  
+  if(typeof options === 'string'){
+    options = { destDir: options };
+  } 
+  else {
+    options = options || {};
+    options.destDir = options.destDir || '/';
+  }
+
   this.inputTree = inputTree;
-  this.options = options || {};
+  this.options = options;
 };
 
 Flatten.prototype.write = function (readTree, destDir) {
