@@ -17,6 +17,7 @@
   "dependencies": {
     "broccoli-kitchen-sink-helpers": "^0.2.0",
     "broccoli-writer": "^0.1.1",
-    "path": "^0.4.9"
+    "path": "^0.4.9",
+    "walk-sync": "^0.1.2"
   }
 }
