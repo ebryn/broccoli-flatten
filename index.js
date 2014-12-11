@@ -1,3 +1,4 @@
+var fs       = require('fs');
 var path     = require('path');
 var helpers  = require('broccoli-kitchen-sink-helpers');
 var Writer   = require('broccoli-writer');
@@ -30,10 +31,16 @@ Flatten.prototype.write = function (readTree, destDir) {
     for (var i = 0; i < filePaths.length; i++) {
       var filePath = filePaths[i];
       if (!(filePath.slice(-1) === '/')) {
+        var destFile = path.join(destDir, self.options.destDir, path.basename(filePath));
+
+        if (fs.existsSync(destFile)) {
+          console.log("WARNING: Overwriting existing file: " + destFile);
+          fs.unlinkSync(destFile);
+        }
         helpers.copyRecursivelySync(
           path.join(srcDir, filePath),
-          path.join(destDir, self.options.destDir, path.basename(filePath))
-        )
+          destFile
+        );
       }
     }
 
